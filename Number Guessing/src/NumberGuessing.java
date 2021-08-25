@@ -4,7 +4,7 @@ public class NumberGuessing {
 	public static void main(String[] args) {
 
 		boolean stillPlaying = true;
-		System.out.println("You have 4 tries to guess a numbner between 1 and 10.\nGuess a"
+		System.out.println("Guess a number between 1 and 10.\nGuess a"
 				+ " number now.");
 		int counter = 0;
 		Scanner userGuessInput = new Scanner(System.in);
@@ -13,7 +13,9 @@ public class NumberGuessing {
 		int secretNumber = (int)(Math.random()*10)+1;
 		System.out.println(secretNumber);
 
-		for (int i=0; i < 4; i++) {
+		//for (int i=0; i < 4; i++) {
+		
+			do {
 			
 			userGuess = userGuessInput.nextInt();
 			counter ++;
@@ -40,6 +42,8 @@ public class NumberGuessing {
 			}
 			
 		}
+			while (stillPlaying);
+			
 		
 		System.out.println("Too bad, you lost. Try again soon!");
 				
